@@ -1,0 +1,9 @@
+Create Seeder
+
+php artisan make:seeder StudentsTableSeeder
+in class
+ public function run()
+    {
+        \App\Models\Student::factory(10)->create();
+    }
+php artisan db:seed --class=StudentsTableSeeder
