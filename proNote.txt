@@ -1,0 +1,39 @@
+git remote add originhttps://github.com/Shivaone1/crudLaravel.git
+git branch --track
+git branch -M main
+git Pull
+git push -u origin main
+-----------------------------
+
+composer create-project laravel/laravel .
+---------------------------------------------
+main.blade.php
+--------------
+<!doctype html>
+<html lang="en">
+    <!--header-->
+
+@include("CRUD.Layout.header")
+
+<body class="antialiased">
+  @yield("main-container")
+
+  @include("CRUD.Layout.footer")
+</body>
+
+</html>
+------------------
+index.blade.php
+----------------
+@extends('CRUD.Layout.main')
+
+@section("main-container")
+
+body Content
+
+@stop
+
+------------------------
+use Facades in creating database
+
+use Illuminate\Support\Facades\DB;
