@@ -29,7 +29,7 @@
             <td>{{ $c->email}}</td>
             <td>{{ $c->city}}</td>
             <td>
-                <a href=""><i class="fa fa-edit"></i></a> <a href="{{ url('/delete/' . $c->ID) }}"><i class="fa fa-trash-alt"></i></a>
+                <a href="{{url('/edit/'.$c->ID)}}"><i class="fa fa-edit"></i></a> <a href="{{ url('/delete/' . $c->ID) }}"><i class="fa fa-trash-alt"></i></a>
             </td>
         </tr>
         @endforeach
